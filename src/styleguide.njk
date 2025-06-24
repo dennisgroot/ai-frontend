@@ -1,0 +1,335 @@
+---
+layout: base
+eleventyNavigation:
+    key: Styleguide
+    order: 1
+meta:
+    title: Styleguide
+    description: De styling van jouw nieuwe Tailwind/WordPress project.
+---
+
+<main class="flex-grow block overflow-x-hidden">
+    <div id="nav" class="inset-x-0 top-0 z-50 w-full transition duration-200 ease-in-out border-b border-primary-500 bg-primary-700 sticky">
+        <div class="container">
+            <div class="mx-auto space-x-1 navbar max-w-none lg:py-8 flex">
+                <div title="Wordpress ↗︎" class="flex flex-row items-center flex-none text-white">
+                    <a aria-label="wordpress" href="<?= home_url('/wp-admin/'); ?>" rel="noopener" class="normal-case flex flex-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                        </svg>
+                        <span class="">Naar WordPress</span>
+                    </a>
+                </div>
+                <div class="flex-1"></div>
+            </div>
+            <div class="items-end justify-start h-96 hero bg-primary-700 text-white">
+                <div class="hero-content w-full py-20">
+                    <div class="py-6 hero-text">
+                        <div class="py-2 font-bold text-2xl text-primary-content">
+                            Styleguide
+                        </div>
+                        <div class="py-2 text-6xl font-bold text-primary-content">
+                            {{ site.title }}
+                        </div>
+                        <p class="prose !text-white">Pas het
+                            <code>tailwind.config</code>
+                            file aan om globale style wijzigingen aan te brengen
+                            <br>Tailwind documentatie:
+                            <a href="https://tailwindcss.com/docs/configuration">https://tailwindcss.com/docs/configuration</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-20">
+        <div>
+            <div class="pb-12">
+                <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-primary">Typografie</div>
+            </div>
+            <div class="flex flex-col lg:space-x-6 lg:flex-row">
+                <div class="space-y-2 font-bold">
+                    <div class="text-9xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-8xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-7xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-6xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-5xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-4xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-3xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-2xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-lg">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-base">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-sm">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-xs">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-9xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-8xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-7xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-6xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-5xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-4xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-3xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-2xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-xl">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-lg">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-base">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-sm">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                    <div class="text-xs">AaBb<span class="hidden lg:inline-block">Cc</span>
+                    </div>
+                </div>
+            </div>
+            <section id="primary">
+                <div class="pt-32 pb-12">
+                    <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-primary capitalize">Primary</div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mt-10 text-xs font-semibold capitalize lg:grid-cols-5">
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-50"></div>
+                        <div class="py-4">50</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-100"></div>
+                        <div class="py-4">100</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-200"></div>
+                        <div class="py-4">200</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-300"></div>
+                        <div class="py-4">300</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-400"></div>
+                        <div class="py-4">400</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary"></div>
+                        <div class="py-4">500</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-600"></div>
+                        <div class="py-4">600</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-700"></div>
+                        <div class="py-4">700</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-800"></div>
+                        <div class="py-4">800</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-900"></div>
+                        <div class="py-4">900</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-primary-950"></div>
+                        <div class="py-4">950</div>
+                    </div>
+                </div>
+            </section>
+            <section id="secondary">
+                <div class="pt-32 pb-12">
+                    <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-secondary capitalize">secondary</div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mt-10 text-xs font-semibold capitalize lg:grid-cols-5">
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-50"></div>
+                        <div class="py-4">50</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-100"></div>
+                        <div class="py-4">100</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-200"></div>
+                        <div class="py-4">200</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-300"></div>
+                        <div class="py-4">300</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-400"></div>
+                        <div class="py-4">400</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-500"></div>
+                        <div class="py-4">500</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-600"></div>
+                        <div class="py-4">600</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-700"></div>
+                        <div class="py-4">700</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-800"></div>
+                        <div class="py-4">800</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-900"></div>
+                        <div class="py-4">900</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-secondary-950"></div>
+                        <div class="py-4">950</div>
+                    </div>
+                </div>
+            </section>
+            <section id="tertiary">
+                <div class="pt-32 pb-12">
+                    <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-tertiary capitalize">tertiary</div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mt-10 text-xs font-semibold capitalize lg:grid-cols-5">
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-50"></div>
+                        <div class="py-4">50</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-100"></div>
+                        <div class="py-4">100</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-200"></div>
+                        <div class="py-4">200</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-300"></div>
+                        <div class="py-4">300</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-400"></div>
+                        <div class="py-4">400</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-500"></div>
+                        <div class="py-4">500</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-600"></div>
+                        <div class="py-4">600</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-700"></div>
+                        <div class="py-4">700</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-800"></div>
+                        <div class="py-4">800</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-900"></div>
+                        <div class="py-4">900</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-tertiary-950"></div>
+                        <div class="py-4">950</div>
+                    </div>
+                </div>
+            </section>
+            <section id="quaternary">
+                <div class="pt-32 pb-12">
+                    <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-quaternary capitalize">quaternary</div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 mt-10 text-xs font-semibold capitalize lg:grid-cols-5">
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-50"></div>
+                        <div class="py-4">50</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-100"></div>
+                        <div class="py-4">100</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-200"></div>
+                        <div class="py-4">200</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-300"></div>
+                        <div class="py-4">300</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-400"></div>
+                        <div class="py-4">400</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-500"></div>
+                        <div class="py-4">500</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-600"></div>
+                        <div class="py-4">600</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-700"></div>
+                        <div class="py-4">700</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-800"></div>
+                        <div class="py-4">800</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-900"></div>
+                        <div class="py-4">900</div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-20 shadow-lg rounded-sm bg-quaternary-950"></div>
+                        <div class="py-4">950</div>
+                    </div>
+                </div>
+            </section>
+            <div class="pt-32 pb-12">
+                <div class="inline-block text-2xl font-bold border-b-8 lg:text-6xl border-primary">Status</div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 mt-10 text-xs font-semibold capitalize lg:grid-cols-5">
+                <div>
+                    <div class="w-20 h-20 shadow-lg rounded-sm bg-info"></div>
+                    <div class="py-4">Info</div>
+                </div>
+                <div>
+                    <div class="w-20 h-20 shadow-lg rounded-sm bg-success"></div>
+                    <div class="py-4">Success</div>
+                </div>
+                <div>
+                    <div class="w-20 h-20 shadow-lg rounded-sm bg-warning"></div>
+                    <div class="py-4">Warning</div>
+                </div>
+                <div>
+                    <div class="w-20 h-20 shadow-lg rounded-sm bg-error"></div>
+                    <div class="py-4">Error</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

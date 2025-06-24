@@ -1,0 +1,71 @@
+{
+    "name": "raadhuis-tailwind-boilerplate",
+    "version": "2.0.0",
+    "description": "Raadhuis boilerplate for WordPress websites/webshops using the Tailwind Framework",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "private": true,
+    "author": {
+        "name": "raadhuis",
+        "email": "online@raadhuis.com",
+        "url": "https://raadhuis.com/"
+    },
+    "bugs": {
+        "url": "https://raadhuis.com/contact/"
+    },
+    "main": "app.js",
+    "scripts": {
+        "start": "yarn clean && npx @11ty/eleventy --serve",
+        "dev": "yarn clean && npx @11ty/eleventy --watch",
+        "watch": "yarn clean && npx @11ty/eleventy --watch",
+        "build": "yarn clean && npx @11ty/eleventy",
+        "clean": "del-cli ./webroot/wp-content/themes/raadhuis/dist"
+    },
+    "keywords": [],
+    "license": "ISC",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.1",
+        "@11ty/eleventy-img": "^3.1.0",
+        "@11ty/eleventy-navigation": "^0.3.5",
+        "@11ty/eleventy-plugin-rss": "^1.2.0",
+        "@11ty/eleventy-plugin-vite": "^4.0.0",
+        "@wordpress/scripts": "^30.1.0",
+        "autoprefixer": "^10.4.14",
+        "concurrently": "^9.0.1",
+        "daisyui": "^4.12.10",
+        "del-cli": "^5.0.0",
+        "dotenv": "^16.0.3",
+        "js-yaml": "^4.1.0",
+        "postcss": "^8.4.47",
+        "sass": "^1.78.0",
+        "tailwindcss": "^3.3.1"
+    },
+    "dependencies": {
+        "@alpinejs/collapse": "^3.14.1",
+        "@alpinejs/focus": "^3.14.1",
+        "@alpinejs/intersect": "^3.14.1",
+        "@alpinejs/mask": "^3.14.1",
+        "@alpinejs/morph": "^3.14.1",
+        "@alpinejs/persist": "^3.14.1",
+        "@faker-js/faker": "^9.0.2",
+        "@imacrayon/alpine-ajax": "^0.9.0",
+        "@ryangjchandler/alpine-tooltip": "^2.0.0",
+        "@tailwindcss/forms": "^0.5.9",
+        "@tailwindcss/typography": "^0.5.15",
+        "alpinejs": "^3.14.1",
+        "browser-sync": "^3.0.2",
+        "copyfiles": "^2.4.1",
+        "cross-env": "^7.0.3",
+        "dayjs": "^1.11.13",
+        "eleventy-sass": "^2.2.6",
+        "esbuild": "^0.23.1",
+        "plyr": "^3.7.8",
+        "postcss-import": "^16.1.0",
+        "postcss-nested": "^6.2.0",
+        "postcss-nested-ancestors": "^3.0.0",
+        "postcss-nesting": "^13.0.0",
+        "swiper": "^11.1.14"
+    },
+    "yarn.exclude": "webroot/plugins/**",
+    "npm.exclude": "webroot/plugins/**",
+    "packageManager": "yarn@4.5.0"
+}

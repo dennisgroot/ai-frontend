@@ -1,0 +1,25 @@
+<section class="block-table wp-block alignfull {{className}}">
+    <div class="row">
+        <div class="large-12 column">
+            <h2 class="block-title">Tabellen</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Naam</th>
+                    <th>Adres</th>
+                    <th>Telefoonnummer</th>
+                </tr>
+                {% for item in [0,1,2,3,4,5,6,7,8,9] %}
+                <tr>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>06 - 12 34 56 78</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>

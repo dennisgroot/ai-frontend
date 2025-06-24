@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang or site.locale }}" data-theme="raadhuis">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ '/assets/css/app.css' | url }}">
+    <title>{{ eleventyNavigation.key or meta.title }}
+        -
+        {{ site.title }}
+    </title>
+    {% include "meta.njk" %}
+</head>
+
+<body>
+    {% include "header.njk" %}
+    <div id="wrapper">
+        <main class="isolate">
+            <div class="bg-white px-6 py-32 lg:px-8">
+                <div class="mx-auto max-w-3xl text-base leading-7 text-content-700">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </main>
+    </div>
+    {% include "footer.njk" %}
+    <script type="module" src="{{ '/assets/js/app.js' | url }}"></script>
+</body>
+
+</html>

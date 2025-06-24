@@ -1,0 +1,37 @@
+<section class="faq wp-block alignfull {{className}}">
+
+    {# Header + text #}
+    <div class="row items-center">
+        <div class="column large-8 small-12">
+            <h2 class="h2 faq__title">{{ blockName }}</h2>
+            <div class="faq__intro">
+                <button type="button" class="btn btn-primary sm:btn-ghost"></button>
+                <p data-fakerjs="sentences|3|6"></p>
+            </div>
+        </div>
+    </div>
+
+    {# Accordion items #}
+    <div class="row items-center">
+        {% for group in [0,1] %}
+        <div class="column small-12 large-8 faq-items">
+            <div class="r-mt-m">
+                <div class="faq__category_title">
+                    <h3 class="h4" data-fakerjs="words|1|2"></h3>
+                </div>
+            </div>
+            {% for item in [0,1,2,3] %}
+            <div x-data="{ expanded: false }" class="faq__item">
+                <div @click="expanded = ! expanded" class="faq__question" :aria-expanded="expanded == true ? true : false">
+                    <span :class="expanded == true ? 'rotate-180' : 'rotate-0'" class="before"></span>
+                    <h4 class="h5 mb-0" data-fakerjs="sentences|3|2"></h4>
+                </div>
+                <div x-show="expanded == true" x-collapse.duration.500ms class="faq__answer mt-4 mb-0">
+                    <p data-fakerjs="sentences|4|6"></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

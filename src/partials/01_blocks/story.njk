@@ -1,0 +1,11 @@
+<section class="story wp-block alignfull {{className}}">
+    <img class="story__image aspect-video object-cover" loading="lazy" src="https://placehold.co/2000x1125/{{color}}/white/svg" alt="" />
+    <div class="row items-center content-center">
+        <div x-data="{ show: false }" x-intersect:enter.once.threshold.0="show = true" :class="show == true ? 'in-viewport' : ''" class="small-12 large-10 lg:col-start-2 column">
+            <blockquote class="story__text">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore&quot;
+                <a href="#" class="button story__button">Lees het hele verhaal van Robin</a>
+            </blockquote>
+        </div>
+    </div>
+</section>

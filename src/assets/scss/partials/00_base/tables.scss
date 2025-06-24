@@ -1,0 +1,13 @@
+/**
+ * Tables
+**/
+
+table {
+    th {
+        @apply bg-black text-white text-left;
+    }
+
+    td {
+        @apply text-left;
+    }
+}

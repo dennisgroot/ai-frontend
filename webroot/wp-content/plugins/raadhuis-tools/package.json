@@ -1,0 +1,79 @@
+{
+    "name": "raadhuis-tools",
+    "version": "2.0.0",
+    "description": "Functies en tools voor websites en webshops gemaakt door Raadhuis.",
+    "private": true,
+    "author": {
+        "name": "Raadhuis",
+        "email": "online@raadhuis.com",
+        "url": "https://raadhuis.com"
+    },
+    "bugs": {
+        "url": "https://raadhuis.com/tools"
+    },
+    "bundleDependencies": false,
+    "keywords": [
+        "sass",
+        "tailwind",
+        "css",
+        "raadhuis",
+        "wordpress",
+        "plugin"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tailwindlabs/tailwindcss"
+    },
+    "engines": {
+        "node": ">=6.3.0",
+        "npm": ">=3.10.5"
+    },
+    "scripts": {
+        "start:js-admin": "./node_modules/.bin/esbuild ./src/admin/js/admin.js --bundle --outfile=./admin/dist/js/admin.js --watch",
+        "start:css-admin": "tailwindcss -i ./src/admin/scss/admin.scss -o ./admin/dist/css/admin.css --postcss --watch",
+        "copy-admin:img": "copyfiles --up 2 \"./src/admin/img/**\" \"./admin/dist\"",
+        "copy-admin:fonts": "copyfiles --up 2 \"./src/admin/fonts/**\" \"./admin/dist\"",
+        "copy-admin:videos": "copyfiles --up 2 \"./src/admin/videos/**\" \"./admin/dist\"",
+        "start:css-public": "tailwindcss -i ./src/public/scss/public.scss -o ./public/dist/css/public.css --postcss --watch",
+        "start:js-public": "./node_modules/.bin/esbuild ./src/public/js/public.js --bundle --outfile=./public/dist/js/public.js --watch",
+        "start:css-public-tools": "tailwindcss -i ./src/public/scss/public-tools.scss -o ./public/dist/css/public-tools.css --postcss --watch",
+        "start:js-public-tools": "./node_modules/.bin/esbuild ./src/public/js/public-tools.js --bundle --outfile=./public/dist/js/public-tools.js --watch",
+        "start:css-login": "tailwindcss -i ./src/public/scss/login.scss -o ./public/dist/css/login.css --postcss --watch",
+        "copy-public:img": "copyfiles --up 2 \"./src/public/img/**\" \"./public/dist\"",
+        "copy-public:fonts": "copyfiles --up 2 \"./src/public/fonts/**\" \"./public/dist\"",
+        "copy-public:videos": "copyfiles --up 2 \"./src/public/videos/**\" \"./public/dist\"",
+        "copy": "concurrently \"yarn copy-admin:img\" \"yarn copy-admin:fonts\" \"yarn copy-admin:videos\" \"yarn copy-public:img\" \"yarn copy-public:fonts\" \"yarn copy-public:videos\"",
+        "copy-export": "rimraf ./export/raadhuis-tools/ && mkdirp ./export/raadhuis-tools/ && cp -R raadhuis-tools.php ./export/raadhuis-tools/ && cp -R LICENSE.txt ./export/raadhuis-tools/ && cp -R includes ./export/raadhuis-tools/ && cp -R languages ./export/raadhuis-tools/ && cp -R uninstall.php ./export/raadhuis-tools/ && cp -R public ./export/raadhuis-tools/ && cp -R admin ./export/raadhuis-tools/ && echo 'Files and folders copied successfully!'",
+        "start": "cross-env NODE_ENV=development concurrently \"yarn copy\" \"yarn start:css-admin\" \"yarn start:js-admin\" \"yarn start:css-public\" \"yarn start:js-public\" \"yarn start:css-public-tools\" \"yarn start:js-public-tools\" \"yarn start:css-login\"",
+        "build:css-public": "tailwindcss -i ./src/public/scss/public.scss -o ./public/dist/css/public.css --postcss --minify",
+        "build:css-public-tools": "tailwindcss -i ./src/public/scss/public-tools.scss -o ./public/dist/css/public-tools.css --postcss --minify",
+        "build:js-public": "./node_modules/.bin/esbuild ./src/public/js/public.js --bundle --outfile=./public/dist/js/public.js --minify",
+        "build:js-public-tools": "./node_modules/.bin/esbuild ./src/public/js/public-tools.js --bundle --outfile=./public/dist/js/public-tools.js --minify",
+        "build:css-login": "tailwindcss -i ./src/public/scss/login.scss -o ./public/dist/css/login.css --postcss --minify",
+        "build:css-admin": "tailwindcss -i ./src/admin/scss/admin.scss -o ./admin/dist/css/admin.css --postcss --minify",
+        "build:js-admin": "./node_modules/.bin/esbuild ./src/admin/js/admin.js --bundle --outfile=./admin/dist/js/admin.js --minify",
+        "build": "cross-env NODE_ENV=production concurrently \"yarn copy\" \"yarn build:css-admin\" \"yarn build:js-admin\" \"yarn build:css-public\" \"yarn build:js-public\" \"yarn build:css-public-tools\" \"yarn build:js-public-tools\" \"yarn build:css-login\" \"yarn copy-export\"",
+        "zip": "cd export && zip -r raadhuis-tools.zip raadhuis-tools",
+        "release": "yarn build && yarn zip"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "concurrently": "^8.2.2",
+        "copyfiles": "^2.4.1",
+        "cross-env": "^7.0.3",
+        "esbuild": "^0.23.0",
+        "postcss": "^8.4.39",
+        "postcss-import": "^15.1.0",
+        "postcss-nested": "^6.0.1",
+        "postcss-nested-ancestors": "^3.0.0",
+        "postcss-nesting": "^12.1.5",
+        "resolve-url-loader": "^5.0.0",
+        "rimraf": "^5.0.7",
+        "tailwindcss": "^3.4.4"
+    },
+    "packageManager": "yarn@4.3.1",
+    "dependencies": {
+        "mkdirp": "^3.0.1"
+    }
+}

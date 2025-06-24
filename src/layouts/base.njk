@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang or site.locale }}" data-theme="raadhuis">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ '/assets/css/app.css' | url }}">
+    <title>{{ eleventyNavigation.key or meta.title }}
+        -
+        {{ site.title }}
+    </title>
+
+
+    {% include "meta.njk" %}
+
+    <!-- Faker JS, alleen benodigd binnen front-end, niet binnen PHP (let op: grote library) -->
+    <script type="module" defer src="{{ '/assets/js/lib/faker.js' | url }}"></script>
+
+    <!-- Haal de rest van de scripts uit app.js -->
+    <script type="module" defer src="{{ '/assets/js/app.js' | url }}"></script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include "header.njk" %}
+   <div id="wrapper">
+       <main class="isolate">
+
+             {{ content | safe }}
+       </main>
+   </div>
+ {% include "footer.njk" %}
+
+</body>
+
+</html>

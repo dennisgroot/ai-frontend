@@ -1,0 +1,364 @@
+<header x-data="{
+        mobileMenuOpen: false,
+        activeDropdown: null,
+        toggleDropdown(name) {
+            this.activeDropdown = this.activeDropdown === name ? null : name;
+        },
+        isDropdownOpen(name) {
+            return this.activeDropdown === name;
+        },
+        closeAllDropdowns() {
+            this.activeDropdown = null;
+        }
+    }" class="w-full">
+        <!-- Yellow top bar -->
+        <div class="w-full h-3 bg-amber-300"></div>
+
+        <!-- Main navigation -->
+        <div class="flex justify-between items-center px-24 w-full h-24 max-md:px-10 max-sm:px-5">
+            <!-- Logo -->
+            <img src="https://placehold.co/269x54?text=SchildklierNL+Logo" alt="SchildklierNL logo" class="w-[269px] h-[54px]">
+
+            <!-- Desktop menu -->
+            <div class="flex gap-6 items-center max-md:hidden">
+                <div class="flex gap-6 text-sm text-zinc-800">
+                    <div class="cursor-pointer hover:text-purple">Over SchildklierNL</div>
+                    <div class="cursor-pointer hover:text-purple">Ervaringen</div>
+                    <div class="cursor-pointer hover:text-purple">Kennisbank</div>
+                    <div class="cursor-pointer hover:text-purple">Nieuws</div>
+                    <div class="cursor-pointer hover:text-purple">Webshop</div>
+                </div>
+                <div>
+                    <svg id="175:4371" width="178" height="46" viewBox="0 0 178 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[178px] h-[46px]">
+                        <mask id="path-1-inside-1_175_4371" fill="white">
+                            <path d="M0.0605469 23.287C0.0605469 10.8606 10.1341 0.786987 22.5605 0.786987H155.099C167.525 0.786987 177.599 10.8606 177.599 23.287C177.599 35.7134 167.525 45.787 155.099 45.787H22.5605C10.1341 45.787 0.0605469 35.7134 0.0605469 23.287Z"></path>
+                        </mask>
+                        <path d="M22.5605 1.78699H155.099V-0.213013H22.5605V1.78699ZM155.099 44.787H22.5605V46.787H155.099V44.787ZM22.5605 44.787C10.6864 44.787 1.06055 35.1611 1.06055 23.287H-0.939453C-0.939453 36.2657 9.58183 46.787 22.5605 46.787V44.787ZM176.599 23.287C176.599 35.1611 166.973 44.787 155.099 44.787V46.787C168.078 46.787 178.599 36.2657 178.599 23.287H176.599ZM155.099 1.78699C166.973 1.78699 176.599 11.4129 176.599 23.287H178.599C178.599 10.3083 168.078 -0.213013 155.099 -0.213013V1.78699ZM22.5605 -0.213013C9.58186 -0.213013 -0.939453 10.3083 -0.939453 23.287H1.06055C1.06055 11.4129 10.6864 1.78699 22.5605 1.78699V-0.213013Z" fill="#694F9C" mask="url(#path-1-inside-1_175_4371)"></path>
+                        <path d="M27.2419 22.7059C28.2656 21.9592 28.9323 20.7509 28.9323 19.3895C28.9323 17.1274 27.0919 15.287 24.8298 15.287C22.5676 15.287 20.7272 17.1274 20.7272 19.3895C20.7272 20.7509 21.3939 21.9592 22.4177 22.7059C19.8727 23.6798 18.0605 26.1473 18.0605 29.0306C18.0605 30.2748 19.0728 31.287 20.317 31.287H29.3426C30.5868 31.287 31.599 30.2748 31.599 29.0306C31.599 26.1473 29.7869 23.6798 27.2419 22.7059ZM21.958 19.3895C21.958 17.806 23.2463 16.5178 24.8298 16.5178C26.4133 16.5178 27.7015 17.806 27.7015 19.3895C27.7015 20.973 26.4133 22.2614 24.8298 22.2614C23.2463 22.2614 21.958 20.973 21.958 19.3895ZM29.3426 30.0562H20.317C19.7514 30.0562 19.2913 29.5961 19.2913 29.0306C19.2913 25.9766 21.7758 23.4921 24.8298 23.4921C27.8838 23.4921 30.3683 25.9766 30.3683 29.0306C30.3682 29.5961 29.9081 30.0562 29.3426 30.0562Z" fill="#694F9C"></path>
+                        <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="14" letter-spacing="0em"><tspan x="41.5986" y="28.3779">Mijn SchildklierNL</tspan></text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="hidden max-md:block">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[24px] h-[24px] text-[#694F9C]" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 6h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Secondary navigation -->
+        <div class="flex justify-between items-center px-24 w-full bg-neutral-100 h-[94px] max-md:px-10 max-sm:px-5">
+            <!-- Desktop secondary menu -->
+            <div class="flex gap-10 items-center max-md:gap-5 max-sm:hidden">
+                <!-- Aandoeningen dropdown -->
+                <div class="relative">
+                    <button @click="toggleDropdown('aandoeningen')" class="flex items-center focus:outline-none">
+                        <svg id="175:4349" width="145" height="23" viewBox="0 0 145 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[145px] h-[23px]">
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0em"><tspan x="0.310547" y="18.1194">Aandoeningen</tspan></text>
+                            <path d="M134.311 9.38647L138.686 13.7615L143.061 9.38647" stroke="#694F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <!-- Aandoeningen submenu -->
+                    <div x-show="isDropdownOpen('aandoeningen')"
+                         @click.away="closeAllDropdowns()"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                         style="display: none;">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Schildklieraandoeningen</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Hashimoto</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Graves</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Schildklierkanker</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Alle aandoeningen</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thema's dropdown -->
+                <div class="relative">
+                    <button @click="toggleDropdown('themas')" class="flex items-center focus:outline-none">
+                        <svg id="175:4352" width="91" height="23" viewBox="0 0 91 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[91px] h-[23px]">
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0em"><tspan x="0.0605469" y="18.1194">Thema's</tspan></text>
+                            <path d="M81.0605 9.38647L85.4355 13.7615L89.8105 9.38647" stroke="#694F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <!-- Thema's submenu -->
+                    <div x-show="isDropdownOpen('themas')"
+                         @click.away="closeAllDropdowns()"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                         style="display: none;">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Voeding</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Medicatie</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Leefstijl</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Alle thema's</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lotgenoten dropdown -->
+                <div class="relative">
+                    <button @click="toggleDropdown('lotgenoten')" class="flex items-center focus:outline-none">
+                        <svg id="175:4355" width="119" height="23" viewBox="0 0 119 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[119px] h-[23px]">
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0em"><tspan x="0.810547" y="18.1194">Lotgenoten</tspan></text>
+                            <path d="M108.811 9.38647L113.186 13.7615L117.561 9.38647" stroke="#694F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <!-- Lotgenoten submenu -->
+                    <div x-show="isDropdownOpen('lotgenoten')"
+                         @click.away="closeAllDropdowns()"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                         style="display: none;">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Ervaringsverhalen</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Forum</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Bijeenkomsten</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Onderzoek dropdown -->
+                <div class="relative">
+                    <button @click="toggleDropdown('onderzoek')" class="flex items-center focus:outline-none">
+                        <svg id="175:4358" width="115" height="23" viewBox="0 0 115 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[115px] h-[23px]">
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0em"><tspan x="0.560547" y="18.1194">Onderzoek</tspan></text>
+                            <path d="M104.561 9.38647L108.936 13.7615L113.311 9.38647" stroke="#694F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <!-- Onderzoek submenu -->
+                    <div x-show="isDropdownOpen('onderzoek')"
+                         @click.away="closeAllDropdowns()"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                         style="display: none;">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Lopend onderzoek</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Resultaten</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Deelnemen</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zelf doen dropdown -->
+                <div class="relative">
+                    <button @click="toggleDropdown('zelfdoen')" class="flex items-center focus:outline-none">
+                        <svg id="175:4361" width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[102px] h-[23px]">
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0em"><tspan x="0.310547" y="18.1194">Zelf doen</tspan></text>
+                            <path d="M91.3105 9.38647L95.6855 13.7615L100.061 9.38647" stroke="#694F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <!-- Zelf doen submenu -->
+                    <div x-show="isDropdownOpen('zelfdoen')"
+                         @click.away="closeAllDropdowns()"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform scale-100"
+                         x-transition:leave-end="opacity-0 transform scale-95"
+                         class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                         style="display: none;">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Zelfhulp</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Oefeningen</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-purple hover:bg-neutral-100">Dagboek</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile secondary menu button -->
+            <div class="hidden max-sm:block">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[24px] h-[24px] text-[#694F9C]" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 6h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Search and Help buttons -->
+            <div class="flex gap-7 items-center">
+                <div>
+                    <button class="focus:outline-none">
+                        <svg id="175:4341" width="84" height="20" viewBox="0 0 84 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[84px] h-[20px]">
+                            <path d="M16.155 15.3694L13.2134 12.4278C12.9925 12.2069 12.711 12.0885 12.423 12.0605C13.3098 10.9555 13.8428 9.55546 13.8428 8.03149C13.8428 4.47082 10.9459 1.57397 7.38525 1.57397C3.82458 1.57397 0.927734 4.47082 0.927734 8.03149C0.927734 11.5922 3.82458 14.489 7.38525 14.489C8.72884 14.489 9.9773 14.0757 11.0118 13.3706C11.0195 13.6909 11.1431 14.0086 11.3872 14.254L14.3288 17.1956C14.5806 17.4478 14.9117 17.574 15.2419 17.574C15.5721 17.574 15.9031 17.4478 16.155 17.1956C16.6595 16.6914 16.6595 15.8739 16.155 15.3694ZM7.38525 12.3365C5.01147 12.3365 3.08024 10.4061 3.08024 8.03149C3.08024 5.65771 5.01147 3.72648 7.38525 3.72648C9.75903 3.72648 11.6903 5.65771 11.6903 8.03149C11.6903 10.4061 9.75903 12.3365 7.38525 12.3365Z" fill="#694F9C"></path>
+                            <text fill="#694F9C" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="26.5332" y="15.3922">Zoeken</tspan></text>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <button class="focus:outline-none">
+                        <svg id="175:4345" width="160" height="54" viewBox="0 0 160 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[160px] h-[54px]">
+                            <mask id="path-1-inside-1_175_4345" fill="white">
+                                <path d="M0.533203 26.574C0.533203 11.9384 12.3977 0.0739746 27.0332 0.0739746H133.033C147.669 0.0739746 159.533 11.9384 159.533 26.574C159.533 41.2095 147.669 53.074 133.033 53.074H27.0332C12.3977 53.074 0.533203 41.2095 0.533203 26.574Z"></path>
+                            </mask>
+                            <path d="M0.533203 26.574C0.533203 11.9384 12.3977 0.0739746 27.0332 0.0739746H133.033C147.669 0.0739746 159.533 11.9384 159.533 26.574C159.533 41.2095 147.669 53.074 133.033 53.074H27.0332C12.3977 53.074 0.533203 41.2095 0.533203 26.574Z" fill="#694F9C"></path>
+                            <path d="M0.533203 0.0739746H159.533H0.533203ZM159.533 26.574C159.533 43.4187 145.878 57.074 129.033 57.074H31.0332C14.1885 57.074 0.533203 43.4187 0.533203 26.574C0.533203 39.0004 12.3977 49.074 27.0332 49.074H133.033C147.669 49.074 159.533 39.0004 159.533 26.574ZM0.533203 53.074V0.0739746V53.074ZM159.533 0.0739746V53.074V0.0739746Z" fill="black" fill-opacity="0.3" mask="url(#path-1-inside-1_175_4345)"></path>
+                            <path d="M42.1865 19.53C43.3244 19.5302 44.4087 19.9921 45.2393 20.8279L45.4053 21.0046C46.159 21.8472 46.6037 22.9619 46.6533 24.1267L46.6582 24.3777C46.652 25.347 46.3132 26.3693 45.6611 27.4216L45.3633 27.8738C44.7898 28.6942 44.0253 29.5391 43.0889 30.3904L42.6768 30.7556C41.2521 31.9887 39.8468 32.9106 39.1992 33.3142L38.832 33.5378C38.7398 33.5914 38.6363 33.6179 38.5332 33.6179C38.4562 33.6179 38.3792 33.6029 38.3066 33.573L38.2363 33.5388C38.1599 33.4947 36.504 32.5331 34.7266 31.0583L34.3701 30.7566C33.3809 29.9034 32.5631 29.054 31.9365 28.2263L31.6797 27.8728C30.8345 26.6591 30.4012 25.4799 30.4082 24.3699L30.415 24.1306C30.4752 22.938 30.9271 21.8222 31.7041 20.9685L31.8662 20.7996C32.6892 19.9803 33.7516 19.53 34.8809 19.53C36.36 19.5302 37.7117 20.3243 38.5332 21.5876C39.3548 20.3242 40.7072 19.53 42.1865 19.53ZM42.1865 20.7175C40.9004 20.7175 39.7248 21.5664 39.1953 22.8718L39.0986 23.1394C39.0194 23.3845 38.7907 23.5505 38.5332 23.5505C38.3079 23.5505 38.1051 23.4232 38.0049 23.2273L37.9688 23.1394C37.4983 21.6838 36.2519 20.7175 34.8799 20.7175C34.0708 20.7177 33.3034 21.0439 32.7012 21.6443L32.583 21.7683C31.9934 22.4161 31.6467 23.2703 31.6006 24.1921L31.5957 24.3777C31.5897 25.3552 32.0577 26.3659 32.7432 27.3171C33.4272 28.2663 34.318 29.1421 35.1348 29.8474L35.6748 30.2996C36.8753 31.2742 38.0102 32.0052 38.5322 32.3279C39.129 31.9565 40.5279 31.0463 41.9102 29.8484L42.2188 29.5759C42.9441 28.9221 43.7008 28.1469 44.3018 27.3152C44.99 26.3627 45.4645 25.3498 45.4707 24.3699L45.4668 24.1775C45.4291 23.2845 45.0913 22.4352 44.5225 21.7986L44.3965 21.6658C43.7878 21.0532 43.003 20.7177 42.1865 20.7175Z" fill="white" stroke="white" stroke-width="0.25"></path>
+                            <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="500" letter-spacing="0em"><tspan x="56.5332" y="32.3922">Help mee</tspan></text>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div x-show="mobileMenuOpen"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 transform -translate-y-10"
+             x-transition:enter-end="opacity-100 transform translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 transform translate-y-0"
+             x-transition:leave-end="opacity-0 transform -translate-y-10"
+             class="fixed inset-0 z-50 bg-white pt-24"
+             style="display: none;">
+            <div class="container mx-auto px-6 py-8">
+                <button @click="mobileMenuOpen = false" class="absolute top-6 right-6 text-purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Main menu items -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-medium text-purple mb-4">Menu</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Over SchildklierNL</a></li>
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Ervaringen</a></li>
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Kennisbank</a></li>
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Nieuws</a></li>
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Webshop</a></li>
+                        <li><a href="#" class="text-zinc-800 hover:text-purple">Mijn SchildklierNL</a></li>
+                    </ul>
+                </div>
+
+                <!-- Secondary menu items with dropdowns -->
+                <div>
+                    <h3 class="text-lg font-medium text-purple mb-4">Categorieën</h3>
+
+                    <!-- Aandoeningen -->
+                    <div class="mb-4">
+                        <button @click="toggleDropdown('mobileAandoeningen')" class="flex items-center justify-between w-full text-left text-purple font-medium">
+                            <span>Aandoeningen</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="{'transform rotate-180': isDropdownOpen('mobileAandoeningen')}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="isDropdownOpen('mobileAandoeningen')" class="mt-2 pl-4 space-y-2" style="display: none;">
+                            <a href="#" class="block text-sm text-purple">Schildklieraandoeningen</a>
+                            <a href="#" class="block text-sm text-purple">Hashimoto</a>
+                            <a href="#" class="block text-sm text-purple">Graves</a>
+                            <a href="#" class="block text-sm text-purple">Schildklierkanker</a>
+                            <a href="#" class="block text-sm text-purple">Alle aandoeningen</a>
+                        </div>
+                    </div>
+
+                    <!-- Thema's -->
+                    <div class="mb-4">
+                        <button @click="toggleDropdown('mobileThemas')" class="flex items-center justify-between w-full text-left text-purple font-medium">
+                            <span>Thema's</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="{'transform rotate-180': isDropdownOpen('mobileThemas')}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="isDropdownOpen('mobileThemas')" class="mt-2 pl-4 space-y-2" style="display: none;">
+                            <a href="#" class="block text-sm text-purple">Voeding</a>
+                            <a href="#" class="block text-sm text-purple">Medicatie</a>
+                            <a href="#" class="block text-sm text-purple">Leefstijl</a>
+                            <a href="#" class="block text-sm text-purple">Alle thema's</a>
+                        </div>
+                    </div>
+
+                    <!-- Lotgenoten -->
+                    <div class="mb-4">
+                        <button @click="toggleDropdown('mobileLotgenoten')" class="flex items-center justify-between w-full text-left text-purple font-medium">
+                            <span>Lotgenoten</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="{'transform rotate-180': isDropdownOpen('mobileLotgenoten')}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="isDropdownOpen('mobileLotgenoten')" class="mt-2 pl-4 space-y-2" style="display: none;">
+                            <a href="#" class="block text-sm text-purple">Ervaringsverhalen</a>
+                            <a href="#" class="block text-sm text-purple">Forum</a>
+                            <a href="#" class="block text-sm text-purple">Bijeenkomsten</a>
+                        </div>
+                    </div>
+
+                    <!-- Onderzoek -->
+                    <div class="mb-4">
+                        <button @click="toggleDropdown('mobileOnderzoek')" class="flex items-center justify-between w-full text-left text-purple font-medium">
+                            <span>Onderzoek</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="{'transform rotate-180': isDropdownOpen('mobileOnderzoek')}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="isDropdownOpen('mobileOnderzoek')" class="mt-2 pl-4 space-y-2" style="display: none;">
+                            <a href="#" class="block text-sm text-purple">Lopend onderzoek</a>
+                            <a href="#" class="block text-sm text-purple">Resultaten</a>
+                            <a href="#" class="block text-sm text-purple">Deelnemen</a>
+                        </div>
+                    </div>
+
+                    <!-- Zelf doen -->
+                    <div class="mb-4">
+                        <button @click="toggleDropdown('mobileZelfdoen')" class="flex items-center justify-between w-full text-left text-purple font-medium">
+                            <span>Zelf doen</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="{'transform rotate-180': isDropdownOpen('mobileZelfdoen')}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="isDropdownOpen('mobileZelfdoen')" class="mt-2 pl-4 space-y-2" style="display: none;">
+                            <a href="#" class="block text-sm text-purple">Zelfhulp</a>
+                            <a href="#" class="block text-sm text-purple">Oefeningen</a>
+                            <a href="#" class="block text-sm text-purple">Dagboek</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile buttons -->
+                <div class="mt-8 space-y-4">
+                    <button class="flex items-center text-purple">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Zoeken
+                    </button>
+                    <button class="w-full py-3 bg-purple text-white rounded-md">
+                        Help mee
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>

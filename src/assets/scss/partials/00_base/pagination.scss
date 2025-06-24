@@ -1,0 +1,32 @@
+/**
+ * Pagination
+**/
+
+.pagination {
+    @apply inline-flex items-center justify-center bg-gray-200 my-5 sm:my-10 mx-0 mb-10 w-fit p-2 rounded;
+
+    ul {
+        @apply m-0 p-0 list-none;
+    }
+
+    li {
+        @apply p-0 inline-block m-0;
+
+        &:before {
+            @apply hidden
+        }
+
+        a,
+        span {
+            @apply no-underline block py-2 px-2.5 sm:px-5;
+        }
+ 
+        .current {
+            @apply rounded bg-primary text-white py-2 px-2.5 md:px-5 font-bold;
+        }
+
+        a {
+            @apply transition-all duration-300 ease-in-out rounded hover:bg-white;
+        }
+    }
+}

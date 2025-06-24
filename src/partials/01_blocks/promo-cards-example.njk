@@ -1,0 +1,29 @@
+---
+layout: base
+eleventyNavigation:
+    key: Promo Cards Example
+    order: 10
+meta:
+    title: Promo Cards Example
+    description: Example of promotional cards component
+---
+
+<div class="container mx-auto py-12">
+  <h1 class="text-4xl font-bold mb-8">Promotional Cards Example</h1>
+  
+  <p class="text-lg mb-8">
+    Below is an example of the promotional cards component that can be used to showcase magazine issues and podcasts.
+  </p>
+  
+  {% include "partials/01_blocks/promo-cards.njk" %}
+  
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold mb-4">How to Use</h2>
+    <p class="mb-4">
+      To include this component in your page, add the following code:
+    </p>
+    <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+      {% raw %}{% include "partials/01_blocks/promo-cards.njk" %}{% endraw %}
+    </pre>
+  </div>
+</div>

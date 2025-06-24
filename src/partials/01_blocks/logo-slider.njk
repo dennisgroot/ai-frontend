@@ -1,0 +1,71 @@
+{# TODO: Slider block nu niet WCAG-proof doordat deze geen navigatie heeft. #}
+<section x-data="swiperLogoSlider()" data-block="{{ className }}" class="logo-slider wp-block alignfull {{ className }}">
+    <div class="row items-center">
+        <div x-data="{ show: false }" x-intersect:enter.once.threshold.0="show = true" :class="show == true ? 'in-viewport' : ''" class="small-12 large-8 column">
+            <div class="r-mb-m">
+                <h2 class="h2 logo-slider__title capitalize">{{ blockName }}</h2>
+                <div class="logo-slider__intro">
+                    <p data-fakerjs="sentences|3|6"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div x-ref="swiperContainerLogoSlider" class="swiper logo-slider__wrapper">
+        <div class="swiper-wrapper">
+            {% for slide in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14] %}
+            <div class="swiper-slide">
+                <a href="#">
+                    <img class="object-contain object-center" loading="lazy" src="https://placehold.co/2000x1125/{{color}}/white/svg" alt="Logo van bedrijfsnaam" />
+                    <span class="sr-only">Logo van bedrijfsnaam</span>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script type="module" defer src="{{ '/assets/js/lib/swiper.js' | url }}"></script>
+<script>
+    function swiperLogoSlider() {
+        return {
+            swiperLogoSlider: null,
+
+            init() {
+                const self = this;
+
+                self.$nextTick(() => {
+                    if (self.$refs.swiperContainerLogoSlider) {
+                        self.swiperLogoSlider = new Swiper(self.$refs.swiperContainerLogoSlider, {
+                            slidesPerView: 1,
+                            spaceBetween: 16,
+                            centeredSlidesBounds: true,
+                            slidesOffsetBefore: 0,
+                            loop: true,
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            breakpoints: {
+                                1024: {
+                                    slidesPerView: 6,
+                                    slidesPerGroup: 1,
+                                    spaceBetween: 24,
+                                },
+                                640: {
+                                    slidesPerView: 4,
+                                    slidesPerGroup: 1,
+                                    spaceBetween: 16,
+                                },
+                            },
+                        });
+                    }
+                });
+            },
+        }
+    }
+</script>

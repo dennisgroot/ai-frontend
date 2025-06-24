@@ -1,0 +1,101 @@
+/**
+ * Footer
+**/
+
+.footer {
+    background: #1B1B3A;
+    padding: var(--xl) 0;
+    color: rgba(white, .8);
+
+    @media (max-width: 640px) {
+        text-align: center;
+    }
+
+    a {
+        color: rgba(white, .8);
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: white;
+    }
+
+    ul {
+        margin: 0;
+
+        li {
+            list-style: none;
+            line-height: 2;
+
+            a {
+                color: rgba(white, .8);
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        &.socials {
+            display: flex;
+            gap: 10px;
+
+            @media (max-width: 640px) {
+                justify-content: center;
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    &__bottom {
+        ul {
+            display: inline-block;
+            padding: 0 var(--m);
+
+            @media (max-width: 640px) {
+                display: block;
+                text-align: center;
+                padding-bottom: var(--m);
+            }
+
+            li {
+                @apply text-sm inline-block relative;
+                padding: 0 var(--xxs);
+
+                @media (max-width: 640px) {
+                    @apply text-xs block p-0;
+                }
+
+                &:after {
+                    content: '-';
+                    position: relative;
+                    display: inline-block;
+                    transform: translateX(3px);
+                    margin: 0 0 0 var(--xxs);
+
+                    @media (max-width: 640px) {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}

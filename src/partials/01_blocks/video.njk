@@ -1,0 +1,66 @@
+<section x-data="videoData" class="video wp-block alignfull {{ className }}">
+    <div class="container">
+        <div class="r-mb-m">
+            <h2 class="h2 video__title">{{ title }}</h2>
+            <div class="video__intro">
+                <p data-fakerjs="sentences|4|6"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="plyr-item aspect-video w-full" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+    </div>
+</section>
+
+<script>
+    function videoData() {
+        return {
+            init() {
+                if (typeof Plyr !== 'undefined') {
+                    const player = new Plyr('.plyr-item', {
+                        controls: [
+                            'play',
+                            'progress',
+                            'current-time',
+                            'mute',
+                            'volume',
+                            'settings',
+                            'fullscreen'
+                        ],
+                        settings: [
+                            'captions', 'quality', 'speed'
+                        ],
+                        i18n: {
+                            restart: 'Opnieuw afspelen',
+                            rewind: '10 seconden terug',
+                            play: 'Afspelen',
+                            pause: 'Pauze',
+                            fastForward: '10 seconden vooruit',
+                            seek: 'Zoek',
+                            volume: 'Volume',
+                            mute: 'Geluid uit',
+                            unmute: 'Geluid aan',
+                            enableCaptions: 'Ondertiteling aan',
+                            disableCaptions: 'Ondertiteling uit',
+                            download: 'Downloaden',
+                            enterFullscreen: 'Volledig scherm',
+                            exitFullscreen: 'Volledig scherm afsluiten',
+                            frameTitle: 'Speler voor {title}',
+                            captions: 'Ondertiteling',
+                            settings: 'Instellingen',
+                            speed: 'Snelheid',
+                            quality: 'Kwaliteit',
+                            loop: 'Herhalen'
+                        }
+                    });
+                }
+            }
+        }
+    }
+</script>
+
+<style scoped="scoped">
+    .plyr-item {
+        @apply bg-gray-200;
+    }
+</style>

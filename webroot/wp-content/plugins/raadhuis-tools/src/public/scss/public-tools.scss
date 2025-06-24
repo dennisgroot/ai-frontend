@@ -1,0 +1,71 @@
+
+@import 'tailwindcss/utilities';
+
+.raadhuis-tools-toolbar-container {
+    .toggle-toolbar.open-toolbar {
+      @apply rt-transition rt-duration-200 rt-ease-in-out;
+    }
+  
+    .raadhuis-tools-toolbar {
+      @apply rt-transition rt-duration-200 rt-ease-in-out;
+  
+      a {
+        @apply rt-bg-[#3958E9] rt-text-white rt-relative rt-no-underline rt-p-3;
+  
+        &.active {
+          @apply rt-bg-[#4e25d4];
+        }
+  
+        &:before {
+          content: attr(data-tooltip);
+          @apply rt-absolute rt-top-1/2 rt-right-[calc(100%+10px)] rt-opacity-0 rt-py-1 rt-px-2 rt-pointer-events-none rt-whitespace-nowrap -rt-translate-y-1/2 rt-bg-[#000000] rt-text-white rt-text-sm rt-transition rt-duration-400;
+        }
+  
+        &:after {
+          content: "";
+          @apply rt-absolute rt-top-0 rt-right-0 rt-w-1 rt-h-1 rt-m-2 rt-flex rt-rounded-full rt-bg-red-500;
+        }
+  
+        &:hover {
+          &:before {
+            @apply rt-opacity-100;
+          }
+        }
+  
+        &.active:after {
+          @apply rt-bg-green-500;
+        }
+  
+        &.raadhuis-tools-smoothing {
+          @apply rt-bg-[#4e25d4];
+          &:after {
+            @apply rt-bg-green-500;
+          }
+  
+          &.active {
+            @apply rt-bg-[#3958E9];
+  
+            &:after {
+              @apply rt-bg-red-500;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .raadhuis-tools-toolbar-container.show-toolbar .open-toolbar {
+    transform: translateY(-50%) translateX(100%);
+  }
+  
+  .raadhuis-tools-toolbar-container.show-toolbar .raadhuis-tools-toolbar {
+    transform: none;
+  }
+  
+  body.raadhuis-tools-antialiased * {
+    @apply !rt-antialiased;
+  }
+  
+  body.raadhuis-tools-subpixel-antialiased * {
+    @apply !rt-subpixel-antialiased;
+  }

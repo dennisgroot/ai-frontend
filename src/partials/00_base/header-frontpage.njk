@@ -1,0 +1,41 @@
+<header class="header {{className}}">
+    <div class="row align-bottom header__row">
+        <div class="small-12 large-5 column">
+            <div class="text-white r-mb-xl header__caption">
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li>Lorem ipsum dolor</li>
+                    </ul>
+                </div>
+                <h1>{{ title }}</h1>
+                <div class="header__intro fs-larger">
+                    <p data-fakerjs="words|10|15"></p>
+                </div>
+                <a href="#" class="button is-style-primary" role="button">Call to action</a>
+            </div>
+        </div>
+        <div class="small-12 large-4 large-offset-3 column">
+            <a href="#" class="header__cta r-p-m r-mb-xl border-white round-medium text-white">
+                <h4>Aenean commodo ligula</h4>
+                <div class="m-0">
+                    <p data-fakerjs="sentences|2|3"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <picture>
+        <source media="(max-width: 768px)" srcset="https://placehold.co/768x1024/{{color}}/white">
+        <source media="(min-width: 769px)" srcset="https://placehold.co/2000x1125/{{color}}/white">
+        <img loading="lazy" class="header__image" src="https://placehold.co/2000x1125/{{color}}/white" alt="Landscape">
+    </picture>
+    <!--
+  <div class="header__video show-for-large">
+    <iframe class="w-full aspect-video"
+      data-source="https://www.youtube.com/embed/T3wMiv3DMGU?autoplay=1&mute=1&loop=1&playlist=T3wMiv3DMGU&rel=0&controls=0&showinfo=0"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  -->
+</header>

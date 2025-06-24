@@ -1,0 +1,66 @@
+<a class="skip-link" href="#content">Spring naar de inhoud</a>
+
+<nav class="nav {{className}}" aria-label="header menu">
+
+    <a href="/" class="nav__logo" title="Terug naar homepagina" rel="home">
+        <img src="assets/img/{{logo}}" alt="Logo {{ title }}">
+        <span class="sr-only">Logo {{ title }}</span>
+    </a>
+
+    <div class="nav__menu" id="mainmenu" aria-labelledby="menutrigger">
+        <ul id="nav-main" class="medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" role="menuitem" tabindex="0" title="Test">Test</a>
+                <ul class="submenu" role="menu" aria-haspopup="true" aria-expanded="false">
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" role="menuitem" tabindex="0" title="Test 2">Test 2</a>
+                        <ul class="submenu" role="menu" aria-haspopup="true" aria-expanded="false">
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                        </ul>
+                    </li>
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" role="menuitem" tabindex="0" title="Test 2">Test 2</a>
+                        <ul class="submenu" role="menu" aria-haspopup="true" aria-expanded="false">
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 3">Test 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="#" role="menuitem" tabindex="0" title="Test 4">Test 4</a></li>
+        </ul>
+    </div>
+
+    <div class="nav__right">
+        <button href="#" class="nav__search-button" aria-expanded="false" aria-controls="nav__search"></button>
+        <ul class="nav__languages" role="menu">
+            <li role="menuitem" lang="en">
+                <a href="#">
+                    <img src="assets/img/language-en.svg" alt="English">
+                </a>
+            </li>
+            <li role="menuitem" lang="de">
+                <a href="#">
+                    <img src="assets/img/language-de.svg" alt="Deutsch">
+                </a>
+            </li>
+            <li role="menuitem" lang="nl" class="active">
+                <a href="#">
+                    <img src="assets/img/language-nl.svg" alt="Nederlands">
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="btn btn-primary m-0" role="menuitem">
+            Aanmelden
+        </a>
+    </div>
+
+    <div class="nav__search">
+        <form action="" class="search">
+            <input type="text" placeholder="Zoeken...">
+            <input type="submit">
+        </form>
+    </div>
+
+    <button id="menutrigger" class="nav__button hide-for-xlarge" role="button" aria-expanded="false" aria-haspopup="true" aria-controls="mainmenu">Menu</button>
+</nav>

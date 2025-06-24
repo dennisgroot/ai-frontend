@@ -1,0 +1,18 @@
+{
+    "name": "acf/faq",
+    "title": "Veelgestelde vragen",
+    "description": "",
+    "category": "raadhuis-content",
+    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 246.7 193.6'><defs><style type='text/css'>.st0{fill:#1E1E1E;}</style></defs><g><path class='st0' d='M182.2,50.4v33.1h-31.5V50.4h-24.5v32.7c4.3,2.1,7.3,6.5,7.3,11.6s-3,9.5-7.3,11.6V139h24.5v-33.6h31.5V139h24.5V50.4H182.2z'/><path class='st0' d='M73.2,50.4c-13.5,0-22.9,3.5-28.8,9.6c-5.2,5.1-7.8,11.9-7.8,20.6v0.3c0,13.5,7.2,22.5,18.2,27.2L33.6,139h28.3l17.8-26.8H80h10.5V139H115v-9.1v-14v-9.6c-4.3-2.1-7.3-6.5-7.3-11.6c0-5.1,3-9.5,7.3-11.6V69.9v-9V50.4H73.2z M90.5,92.9H74.3c-8.3,0-13.2-4-13.2-10.5v-0.3c0-7,5.1-10.5,13.3-10.5h16.1V92.9z'/></g></svg>",
+    "keywords": [
+      "Faq"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "faq.php"
+    },
+    "align": "full",
+    "supports": {
+      "anchor": true
+    }
+  }

@@ -1,0 +1,18 @@
+/**
+ * WP Block Embed
+ */
+.wp-block-embed {
+    @apply aspect-video my-20 mx-0;
+    @extend .wp-block !optional;
+
+    &:after {
+        content: none !important;
+    }
+
+    .wp-block-embed__wrapper {
+        &:before {
+            content: none !important;
+            display: none;
+        }
+    }
+}

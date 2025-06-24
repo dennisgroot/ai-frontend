@@ -1,0 +1,27 @@
+<section class="gallery wp-block alignfull {{className}}">
+    <div class="row">
+        <div class="small-12 large-6 column">
+            <div class="r-mb-m">
+                <h2 class="h2 gallery__title">{{ blockName }}</h2>
+                <div class="gallery__intro">
+                    <p data-fakerjs="sentences|3|6"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# TODO: Fancybox werkend maken #}
+    <div class="container">
+        <div class="gallery__container">
+            {% for item in [0,1,2,3,4,5,6,7,8,9] %}
+            <a class="{{ 'gallery__more' if loop.index > 4}}" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis" href="https://source.unsplash.com/random/1200x800/?{{image-library}}">
+                <img loading="lazy" class="lazyload aspect-[12/8]" src="https://placehold.co/1200x800/{{color}}/white/svg" title="FB_IMG_1623957271902" alt="Landscape" />
+                <span class="sr-only">Caption</span>
+                {% if loop.index > 4 %}
+                <div class="gallery__number">+5</div>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

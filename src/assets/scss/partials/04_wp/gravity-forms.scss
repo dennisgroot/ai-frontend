@@ -1,0 +1,300 @@
+// Forms basic styling
+
+#wrapper {
+    form {
+        *:focus-visible {
+            @apply outline !outline-2 !outline-secondary;
+        }
+    }
+
+    label {
+        display: block;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.8;
+        color: #000000;
+    }
+
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    select {
+        @apply bg-white border-content-300 py-4 px-6 ring-0 transition-all duration-200 ease-out rounded-md text-content-500 mix-blend-normal text-base w-full;
+
+        &:hover {
+            @apply border-secondary bg-inherit ring-0;
+        }
+
+        &:focus {
+            @apply border-secondary bg-white ring-0;
+        }
+    }
+
+    textarea {
+        @apply h-[150px] resize-y;
+    }
+
+    [type='checkbox'],
+    [type='radio'] {
+        @apply bg-white border-content-400 transition-all duration-200 ease-out w-6 h-6;
+    }
+
+    [type='checkbox'] {
+        @apply rounded;
+
+        &:focus {
+            @apply ring-success border-success;
+        }
+
+        &:checked {
+            @apply ring-success bg-success;
+        }
+    }
+
+    [type='radio'] {
+        @apply rounded-full;
+
+        &:focus {
+            @apply ring-secondary border-secondary;
+        }
+
+        &:checked {
+            @apply ring-secondary bg-secondary;
+        }
+    }
+
+    select {
+        background-image: url('../img/gf-select-icon.svg');
+        background-size: 58px 58px;
+        background-position: right center;
+        @apply text-content-300;
+
+        &.changed {
+            @apply text-content-500;
+        }
+    }
+
+    .form-title {
+        @apply h2 text-inherit mb-6;
+    }
+
+    .form-text {
+        @apply text-inherit text-xl font-bold mb-6;
+    }
+
+    .label {
+        @apply font-bold font-heading text-inherit text-xl block mb-2;
+    }
+}
+
+//select dropdown icon
+.ginput_container_select {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        background: url(../img/gf-select-icon.svg) no-repeat;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+//beter gebruikersinterface dropdown styling
+.gform_wrapper .ginput_container .chosen-container-single .chosen-drop .chosen-search input.chosen-search-input[type=text] {
+    background-image: none;
+
+    @media (max-width: 640px) {
+        background-image: none;
+    }
+}
+
+.chosen-single {
+    @apply border border-solid border-content-300 rounded-sm text-content-500 text-base shadow-none h-[50px] flex items-center;
+
+    div {
+        display: none;
+    }
+}
+
+.chosen-drop {
+    top: 90%;
+}
+
+.chosen-search {
+    background: none;
+
+    input[type=text] {
+        background: #f1f1f1;
+        border: none;
+        position: relative;
+        background-image: none;
+    }
+}
+
+.gform_wrapper {
+
+    // required
+    .gfield_required {
+        @apply text-primary-500;
+    }
+
+    // label
+    .gfield_label {
+        @apply text-base font-normal;
+    }
+
+    // description
+    .gfield_description {
+        @apply text-content-500 text-sm mb-4;
+    }
+
+    // progress bar
+    .gf_progressbar_percentage {
+        @apply bg-primary rounded-sm min-h-[50px] text-white relative;
+
+        span {
+            font-size: 0.9375rem;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-60%, -50%);
+        }
+    }
+
+    // description with background
+    .gfield_consent_description {
+        border: 0;
+        background: white;
+        border-radius: 5px;
+        color: #1B1B3A;
+    }
+
+    // save progress send button
+    #gform_send_resume_link_button_1,
+    #gform_send_resume_link_button_2,
+    #gform_send_resume_link_button_3,
+    #gform_send_resume_link_button_4,
+    #gform_send_resume_link_button_5 {
+        @apply bg-content-800 text-white border-2 border-content-800 rounded-sm py-2 px-4;
+    }
+}
+
+.gform_wrapper.gravity-theme {
+    .gf_page_steps {
+        border-bottom: none;
+    }
+
+    // every step not active
+    .gf_step {
+        @apply bg-content-400 text-black;
+        margin: 8px 0px 8px 0;
+        padding: .9em 1.5em;
+        border: none;
+        border-radius: 0;
+    }
+
+    //every step active
+    .gf_step_active {
+        @apply bg-primary text-white;
+    }
+
+    //completed step
+    .gf_step_completed {
+        @apply relative bg-black text-white;
+
+        .gf_step_label {
+            @apply relative;
+        }
+    }
+
+    // Number NOT SHOWING
+    .gf_step_number {
+        display: none;
+    }
+
+    // text inside button
+    .gf_step_label {
+        @apply text-sm py-1 px-6;
+    }
+
+    // Default error validation
+    .gform_validation_errors {
+        background: #fff9f9;
+        border: 1px solid red;
+        border-radius: 0px;
+    }
+
+    .gform_validation_errors>h2 {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .gchoice {
+        @apply flex flex-row flex-nowrap items-center gap-3;
+    }
+
+    // fullwidth buttons example: true or false
+    //custom class
+    .fullwidth-true-false {
+        .gfield_radio {
+            display: flex;
+            gap: 30px;
+
+            .gchoice {
+                input[type="radio"] {
+                    &:checked {
+                        &:before {
+                            @apply bg-primary;
+                        }
+
+                        +label {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gchoice {
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            label {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-60%, -50%);
+                color: black;
+            }
+        }
+
+        .gfield-choice-input {
+            @apply border-2 border-primary-500 rounded-sm min-h-[50px] w-full;
+
+            &:before {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    //custom error using custom HTML with class ".error" 
+    .error {
+        @apply bg-error-50 border-error-500 border-2 text-error-500 text-base rounded-sm p-5 w-full;
+    }
+}

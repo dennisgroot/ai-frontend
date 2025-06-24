@@ -1,0 +1,55 @@
+/**
+ * FAQ
+**/
+
+.faq {
+    &__item {
+        @apply p-8 rounded-md mb-5 transition-all duration-300 ease-in-out bg-white shadow r-mt-m;
+
+        @media (max-width: 640px) {
+            @apply p-5;
+        }
+    }
+
+    &__question {
+        position: relative;
+        padding-right: 80px;
+        cursor: pointer;
+        transition: .3s all ease;
+
+        @media (max-width: 640px) {
+            padding-right: 50px;
+        }
+
+        .before {
+            @apply bg-primary bg-no-repeat bg-center bg-[length:60%_60%] absolute right-0 w-10 h-10 rounded-full transition-all duration-500 ease-in-out origin-center;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"/><path d="M0-.75h48v48H0z" fill="none"/></svg>');
+
+            @media (max-width: 640px) {
+                @apply w-8 h-8 bg-[length:8px_8px];
+            }
+        }
+
+        h3 {
+            transition: .3s all ease;
+            color: #000000;
+        }
+
+        &:hover {
+            @apply text-primary-500;
+
+            h3 {
+                @apply text-primary-500;
+            }
+
+            .before {
+                @apply bg-primary-700 bg-center bg-no-repeat;
+                background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14.83 16.42L24 25.59l9.17-9.17L36 19.25l-12 12-12-12z"/><path d="M0-.75h48v48H0z" fill="none"/></svg>');
+
+                @media (max-width: 640px) {
+                    background-size: 7px;
+                }
+            }
+        }
+    }
+}

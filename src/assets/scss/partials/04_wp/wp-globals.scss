@@ -1,0 +1,72 @@
+.wp-block-post-title {
+    margin-bottom: 1.5rem;
+    
+    &:before {
+        content: 'Pagina titel: ';
+        pointer-events: none;
+        user-select: none;
+        color: #999;
+    }
+}
+
+h1.wp-block-heading {
+    @apply h1;
+}
+
+h2.wp-block-heading {
+    @apply h2;
+}
+
+h3.wp-block-heading {
+    @apply h3;
+}
+
+h4.wp-block-heading {
+    @apply h4;
+}
+
+h5.wp-block-heading {
+    @apply h5;
+}
+
+h6.wp-block-heading {
+    @apply h6;
+}
+
+// Docs: https://github.com/tailwindlabs/tailwindcss-typography
+.typography, .wp-typography {
+    @apply prose lg:prose-lg leading-relaxed;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply mt-0;
+    }
+
+    h1 {
+        @apply h1;
+    }
+
+    h2 {
+        @apply h2;
+    }
+    
+    h3 {
+        @apply h3;
+    }
+    
+    h4 {
+        @apply h4;
+    }
+    
+    h5 {
+        @apply h5;
+    }
+    
+    h6 {
+        @apply h6;
+    }
+}

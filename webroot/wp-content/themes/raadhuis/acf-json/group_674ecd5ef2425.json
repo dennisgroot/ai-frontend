@@ -1,0 +1,137 @@
+{
+    "key": "group_674ecd5ef2425",
+    "title": "Instellingen",
+    "fields": [
+        {
+            "key": "field_674ecd5f287b0",
+            "label": "Gebruik",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_674ecda0287b1",
+            "label": "Modus",
+            "name": "modus",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Bij de keuze: \"Meerdere vestigingen\" wordt de score van alle gespecificeerde vestigingen bij elkaar opgeteld. Gebruik de keuze: \"Enkele vestiging\" om alleen de score van de eerste vestiging te gebruiken.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single": "Enkele vestiging",
+                "multiple": "Meerdere vestigingen"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_674ecdc1287b2",
+            "label": "Vestigingen",
+            "name": "places",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Maximaal 10 vestigingen",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 10,
+            "collapsed": "",
+            "button_label": "Extra vestiging toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_674ece46287b3",
+                    "label": "Google Places ID",
+                    "name": "place_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_674ecdc1287b2"
+                },
+                {
+                    "key": "field_674ece60287b4",
+                    "label": "Google API console key",
+                    "name": "console_key",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_674ecdc1287b2"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rh-google-reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1733217979
+}

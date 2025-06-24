@@ -1,0 +1,71 @@
+/*
+Handige Tailind UI kits:
+------------------------
+1. https://preline.co/docs/buttons.html
+2. https://tailwindui.com/components
+3. https://daisyui.com/components/
+4. https://www.hyperui.dev/
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Plugins */
+
+/* Block styling (00_base) */
+@import './partials/00_base/animations.scss';
+@import './partials/00_base/buttons.scss';
+@import './partials/00_base/cards.scss';
+@import './partials/00_base/footer.scss';
+@import './partials/00_base/global.scss';
+@import './partials/00_base/grid.scss';
+@import './partials/00_base/header.scss';
+@import './partials/00_base/lists.scss';
+@import './partials/00_base/loader.scss';
+@import './partials/00_base/nav.scss';
+@import './partials/00_base/pagination.scss';
+@import './partials/00_base/tables.scss';
+
+/* Block styling (01_blocks) */
+
+@import './partials/01_blocks/news-cards.scss';
+@import './partials/01_blocks/faq.scss';
+@import './partials/01_blocks/gallery.scss';
+@import './partials/01_blocks/image-slider.scss';
+@import './partials/01_blocks/image-text.scss';
+@import './partials/01_blocks/item-list.scss';
+@import './partials/01_blocks/logo-slider.scss';
+@import './partials/01_blocks/news.scss';
+@import './partials/01_blocks/promo-cards.scss';
+@import './partials/01_blocks/story.scss';
+@import './partials/01_blocks/team.scss';
+@import './partials/01_blocks/video.scss';
+
+/* WP block styling (01_blocks) */
+@import './partials/04_wp/gutenberg/blocks/wp-block-buttons.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-columns.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-cover.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-details.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-embed.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-gallery.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-group.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-image.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-media-text.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-pullquote.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-quote.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block-table.scss';
+@import './partials/04_wp/gutenberg/blocks/wp-block.scss';
+
+// Vendor
+@import './partials/03_vendor/swiper.scss';
+@import './partials/03_vendor/plyr.scss';
+
+/* Plugins */
+@import './partials/04_wp/wp-globals.scss';
+@import './partials/04_wp/gravity-forms.scss';
+
+/* Tailwind settings additions / overwrites */
+@import './custom/base.scss';
+@import './custom/components.scss';
+@import './custom/utilities.scss';

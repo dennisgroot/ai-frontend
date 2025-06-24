@@ -1,0 +1,53 @@
+<section class="news wp-block alignfull {{className}}">
+    <div class="row">
+        <div class="small-12 large-6 column">
+            <div class="r-mb-m">
+                <h2 class="h2 news__title">{{ blockName }}</h2>
+                <div class="news__intro">
+                    <p data-fakerjs="sentences|3|6"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row small-up-1 large-up-2">
+        <div class="column relative">
+            <a href="#" class="news__item-big">
+                <div class="news__container overflow-hidden">
+                    <img loading="lazy" class="object-cover object-center aspect-[12/8] inset-0" src="https://placehold.co/1200x800/{{color}}/white/svg" />
+                    <div class="news__content r-p-m text-white">
+                        <span class="before"></span>
+                        <div class="news__date text-white r-mb-xs">23 februari 2023</div>
+                        <h3 class="text-white m-0" data-fakerjs="words|5|10">Keuzebegeleiding</h3>
+                        <span class="after"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            {% for item in [0,1,2] %}
+            <article class="news__item-small">
+                <div class="row collapse">
+                    <div class="column small-8 medium-8">
+                        <div class="news__content r-p-m">
+                            <span class="news__date r-mb-xs">23 februari 2023</span>
+                            <a href="#">
+                                <h3 class="h4 m-0" data-fakerjs="words|5|10">Financiën</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column small-4 medium-4 text-center pr-0">
+                        <div class="news__image-container">
+                            <img loading="lazy" class="news__image lazyload aspect-[6/4]" src="https://placehold.co/600x400/{{color}}/white/svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column r-py-m text-right">
+            <a href="#" class="button" role="button">Bekijk al het nieuws</a>
+        </div>
+    </div>
+</section>

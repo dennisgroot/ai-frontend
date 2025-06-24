@@ -1,0 +1,21 @@
+{
+    "name": "Raadhuis Google Places API",
+    "slug": "raadhuis-google-places-api",
+    "author": "<a href='https://raadhuis.com'>Raadhuis</a>",
+    "author_profile": "https://raadhuis.com",
+    "version": "1.1.2",
+    "download_url": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-google-places-api/raadhuis-google-places-api.zip",
+    "requires": "3.0",
+    "tested": "6.6.2",
+    "requires_php": "5.3",
+    "last_updated": "2023-10-08 08:30:00",
+    "sections": {
+        "description": "Veelgebruikte functies en acties voor WordPress websites gemaakt door Raadhuis",
+        "installation": "Activeer de plugin om deze te gebruiken.",
+        "changelog": "<h4>1.1.2 - 03-02-2025</h4><ul><li>Fix: Show error message in alert when response gives error.</li><li>Fix: Reload after API-call.</li><li>New: Polylang support + flag icons.</li></ul>"
+    },
+    "banners": {
+        "low": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-google-places-api/raadhuis-google-places-api.jpg",
+        "high": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-google-places-api/raadhuis-google-places-api-x2.jpg"
+    }
+}

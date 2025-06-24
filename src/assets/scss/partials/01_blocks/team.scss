@@ -1,0 +1,95 @@
+.team {
+    padding-bottom: calc(var(--l)) !important;
+
+    &__image {
+        margin: 0 auto;
+    }
+
+    &__line {
+        width: 25%;
+        border-bottom: 1px solid #cacaca;
+    }
+
+    &__socials {
+        @apply text-lg font-bold;
+
+        a {
+            display: block;
+            line-height: 2.2;
+            text-decoration: none;
+            @apply text-primary-500;
+        }
+    }
+
+    &__content {
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s all ease;
+    }
+
+    .slick-slide {
+        opacity: .2;
+        transition: .5s all ease;
+
+        &.slick-current {
+            opacity: 1;
+
+            .team__content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        @apply bg-primary;
+        background: url(../img/icon-arrow-white.svg) center center / 10px no-repeat;
+        transform: translateY(-50%);
+        transform-origin: center center;
+        border-radius: 100px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        right: 15%;
+        top: 16vw;
+
+        @media (max-width: 460px) {
+            right: 8%;
+            top: 47vw;
+            background-size: 8px;
+            width: 35px;
+            height: 35px;
+        }
+
+        &.slick-disabled {
+            opacity: 0;
+        }
+    }
+
+    .slick-prev {
+        left: 15%;
+        z-index: 5;
+        transform: scaleX(-1) translateY(-50%);
+
+        @media (max-width: 640px) {
+            left: 8%;
+            transform: scaleX(-1) translateY(-50%);
+        }
+    }
+
+    .slick-dots {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        left: auto;
+        bottom: 0;
+        transform: none;
+
+        .slick-active {
+            button {
+                @apply bg-primary;
+            }
+        }
+    }
+}

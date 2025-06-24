@@ -1,0 +1,3 @@
+Sitemap: https://website.nl/sitemap_index.xml
+User-agent:*
+Disallow:

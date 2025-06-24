@@ -1,0 +1,11 @@
+<div x-data="{ showBlock: false }" x-intersect:enter.once="showBlock = true" class="container text-center">
+    <template x-if="showBlock == true">
+        <div class="pagination">
+            <ul>
+                <li><span aria-current="page" class="current">1</span></li>
+                <li><a class="" href="http://raadhuisboilerplate.test/possssst/page/2/">2</a></li>
+                <li><a class="next" href="http://raadhuisboilerplate.test/possssst/page/2/">»</a></li>
+            </ul>
+        </div>
+    </template>
+</div>

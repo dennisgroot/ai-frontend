@@ -1,0 +1,19 @@
+/**
+ * WP Block Cover
+ */
+.wp-block-cover {
+	@media (max-width: 640px) {
+		width: 100%;
+	}
+
+	&.alignwide {
+		width: calc(1600px + 20em);
+		margin-left: -10vw;
+		margin-right: -10vw;
+	}
+
+	&.alignfull {
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
+	}
+}

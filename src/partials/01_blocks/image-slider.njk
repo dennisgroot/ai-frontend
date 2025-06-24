@@ -1,0 +1,87 @@
+<section x-data="imageSlider()" data-block="{{ className }}" class="image-slider wp-block alignfull {{className}}">
+    <div class="row">
+        <div class="small-12 large-6 column">
+            <div class="r-mb-m">
+                <h2 class="h2 image-slider__title">{{ blockName }} </h2>
+                <div class="image-slider__intro">
+                    <p data-fakerjs="sentences|3|6"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div x-ref="swiperContainerImageSlider" class="swiper image-slider__wrapper">
+            <div class="swiper-wrapper">
+                {% for slide in [0,1,2,3] %}
+                <div class="swiper-slide">
+                    <span class="before"></span>
+                    <img loading="lazy" class="lazyload aspect-video" src="https://placehold.co/2000x1125/{{color}}/white/svg" title="#" alt="Landscape" />
+                    <div class="image-slider__caption">
+                        <div class="image-slider__content">
+                            <h3 class="h3" data-fakerjs="words|4|8"></h3>
+                            <p data-fakerjs="sentences|3|6"></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Add navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="module" defer src="{{ '/assets/js/lib/swiper.js' | url }}"></script>
+<script>
+    function imageSlider() {
+        return {
+            imageSlider: null,
+
+            init() {
+                const self = this;
+
+                self.$nextTick(() => {
+                    if (self.$refs.swiperContainerImageSlider) {
+                        self.imageSlider = new Swiper(self.$refs.swiperContainerImageSlider, {
+                            slidesPerView: 1,
+                            centeredSlides: true,
+                            loop: false,
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                1830: {
+                                    slidesPerView: 1,
+                                    // spaceBetween: 16,
+                                    centeredSlides: true,
+                                    centeredSlidesBounds: true,
+                                },
+                                768: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 16,
+                                    centeredSlides: true,
+                                    centeredSlidesBounds: true,
+                                },
+                            },
+                        });
+                    }
+                });
+            },
+        }
+    }
+</script>

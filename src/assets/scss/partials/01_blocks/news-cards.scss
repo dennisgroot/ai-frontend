@@ -1,0 +1,10 @@
+.news-cards {
+    .font-inter {
+        font-family: 'Inter', sans-serif;
+    }
+
+    // Custom border-bottom for the button that can't be easily done with Tailwind
+    button {
+        border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    }
+}

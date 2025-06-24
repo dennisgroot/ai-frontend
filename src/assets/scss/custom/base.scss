@@ -1,0 +1,100 @@
+@layer base {
+    :root {
+        --plyr-color-main: theme('colors.primary.500');
+        --spacing: .85rem;
+        --xxl: calc(var(--spacing) * 8);
+        --xl: calc(var(--spacing) * 6);
+        --l: calc(var(--spacing) * 4.5);
+        --m: calc(var(--spacing) * 3);
+        --s: calc(var(--spacing) * 1.5);
+        --xs: calc(var(--spacing) * .75);
+        --xxs: calc(var(--spacing) * .5);
+    }
+
+    @media (max-width: 1200px) {
+        :root {
+            --xxl: calc(var(--spacing) * 6.5);
+            --xl: calc(var(--spacing) * 5);
+            --l: calc(var(--spacing) * 3.5);
+            --m: calc(var(--spacing) * 2.5);
+            --s: calc(var(--spacing) * 1);
+            --xs: calc(var(--spacing) * 0.5);
+            --xxs: calc(var(--spacing) * 0.25);
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        :root {
+            --xxl: calc(var(--spacing) * 5);
+            --xl: calc(var(--spacing) * 3.5);
+            --l: calc(var(--spacing) * 2.5);
+            --m: calc(var(--spacing) * 2);
+            --s: calc(var(--spacing) * 1);
+            --xs: calc(var(--spacing) * 0.5);
+            --xxs: calc(var(--spacing) * 0.25);
+        }
+    }
+    
+    @media (max-width: 640px) {
+        :root {
+            --xxl: calc(var(--spacing) * 4);
+            --xl: calc(var(--spacing) * 3);
+            --l: calc(var(--spacing) * 2);
+            --m: calc(var(--spacing) * 1.5);
+            --s: calc(var(--spacing) * 0.75);
+            --xs: calc(var(--spacing) * 0.5);
+            --xxs: calc(var(--spacing) * 0.25);
+        }
+    }
+
+    * {
+        @apply antialiased;
+    }
+
+    body {
+        @apply min-h-screen h-auto font-body text-content;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold w-full font-heading;
+
+        > a {
+            @apply no-underline;
+
+            &:hover {
+                @apply underline;
+            }
+        }
+    }
+    
+    ::selection {
+        @apply bg-primary text-white;
+    }
+
+    ::-webkit-input-placeholder {
+        text-transform: none;
+    }
+    :-moz-placeholder {
+        text-transform: none;
+    }
+    ::-moz-placeholder {
+        text-transform: none;
+    }
+    :-ms-input-placeholder {
+        text-transform: none;
+    }
+    ::placeholder {
+        text-transform: none;
+    }
+
+    // Voor smooth scroll naar ankerpunten, met sticky navigation. Pas evt. aan naar sticky navigatie hoogte.
+    :target { 
+        scroll-margin-top: 4rem;
+    }
+
+}

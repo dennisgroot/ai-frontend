@@ -1,0 +1,22 @@
+/**
+ * WP Block
+ */
+
+.wp-block {
+    max-width: 100%;
+
+    /* Width of "wide" blocks */
+    &[data-align="wide"] {
+        max-width: 100%;
+    }
+
+    /* Width of "full-width" blocks */
+    &[data-align="full"] {
+        max-width: none;
+    }
+
+    >.row {
+        max-width: 100rem !important;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,18 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.toplevel_page_raadhuis-api-import-mapper {
+    background-color: #f7f8fb;
+    background-image: radial-gradient(circle, #e6e8f0 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+.cardheader {
+    display: none;
+}
+
+div.cardcontainer > raadhuis-apicard > div > div > div.cardheader {
+    display: block !important;
+}

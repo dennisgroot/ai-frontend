@@ -1,0 +1,21 @@
+{
+    "name": "Raadhuis Tools",
+    "slug": "raadhuis-tools",
+    "author": "<a href='https://raadhuis.com'>Raadhuis</a>",
+    "author_profile": "https://raadhuis.com",
+    "version": "2.0.2",
+    "download_url": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-tools/raadhuis-tools.zip",
+    "requires": "3.0",
+    "tested": "6.6.2",
+    "requires_php": "5.3",
+    "last_updated": "2024-11-11 11:30:00",
+    "sections": {
+        "description": "Veelgebruikte functies en acties voor WordPress websites gemaakt door Raadhuis",
+        "installation": "Activeer de plugin om deze te gebruiken.",
+        "changelog": "<h4>2.0.2 - 11 november 2024</h4><ul><li>Toon ID kolom ook voor standaard WP tags</li></ul>"
+    },
+    "banners": {
+        "low": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-tools/raadhuis-tools.jpg",
+        "high": "https://plugins.raadhuis.com/resources/wordpress/plugins/raadhuis/raadhuis-tools/raadhuis-tools-x2.jpg"
+    }
+}

@@ -1,0 +1,15 @@
+.DS_Store
+node_modules
+npm-debug.log
+yarn-error.log
+bower_components
+*.swp
+.ftppass
+.cache
+.idea
+.env
+.11ty-cache
+.11ty-vite
+webroot/wp-content/themes/raadhuis/dist
+.parcel-cache
+.config/

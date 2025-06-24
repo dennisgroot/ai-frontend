@@ -1,0 +1,7 @@
+/**
+ * WP Block Quote
+ */
+.wp-block-quote {
+   // @extend .wp-block !optional;
+    @extend blockquote !optional;
+}

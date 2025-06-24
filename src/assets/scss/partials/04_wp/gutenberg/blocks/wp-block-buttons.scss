@@ -1,0 +1,56 @@
+/**
+ * WP Buttons
+ */
+.wp-block-buttons {
+    // @extend .wp-block !optional;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .wp-block-button {
+        &:last-child {
+            margin: 0;
+        }
+
+        .wp-block-button__link {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.is-style-primary {
+            .wp-block-button__link {
+                @extend .button !optional;
+                @extend .button, .primary !optional;
+            }
+        }
+
+        &.is-style-secondary {
+            .wp-block-button__link {
+                @extend .button !optional;
+                @extend .button, .secondary !optional;
+            }
+        }
+
+        &.is-style-ghost {
+            .wp-block-button__link {
+                @extend .button !optional;
+                @extend .button, .ghost !optional;
+            }
+        }
+
+        &.is-style-ghost-green {
+            .wp-block-button__link {
+                @extend .button !optional;
+                @extend .button, .ghost, .green !optional;
+            }
+        }
+
+        &.is-style-link {
+            .wp-block-button__link {
+                @extend .link !optional;
+            }
+        }
+    }
+}

@@ -1,0 +1,168 @@
+/**
+ * Cards
+**/
+
+.card {
+    position: relative;
+    border-radius: 0.5rem;
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: .3s all ease;
+    overflow: hidden;
+    background: white;
+
+    &:before {
+        content: '';
+        @apply bg-primary absolute bottom-0 left-0 h-[5px] w-full opacity-0 transition duration-500;
+    }
+
+    &:hover {
+        @apply text-black;
+
+        .card__title {
+            @apply text-primary-500 !important;
+        }
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &__image-wrapper {
+        @apply bg-content-400 relative;
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-bottom: 22px;
+        width: 100%;
+    }
+
+    &__event-date {
+        @apply bg-primary;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 12px 17px 12px 17px;
+        font-weight: 600;
+    }
+
+    &__date {
+        @apply text-content-700;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    &__vacancy-info {
+        @apply bg-content-50 text-black;
+        padding: 8px 16px;
+        border-radius: 0.5rem;
+        display: inline-block;
+        width: fit-content;
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin-bottom: var(--s);
+    }
+
+    &__text {
+        margin-top: 5px;
+        //margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        color: #000000 !important;
+        text-decoration: none;
+        transition: 0.3s all ease;
+
+        &:hover {
+            @apply text-primary-500;
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+        @apply text-primary-500;
+    }
+
+    &__button {
+        width: fit-content;
+        cursor: pointer;
+
+        @media (max-width: 460px) {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--black {
+        background: black;
+        color: white;
+
+        &:hover {
+            color: white;
+
+            .card__title {
+                color: white !important;
+            }
+        }
+
+        .card__title {
+            color: white !important;
+        }
+
+        .card__date {
+            @apply text-content-500;
+        }
+
+        .card__image {
+            margin-bottom: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card__content {
+            padding: var(--m);
+        }
+    }
+
+    &--white {
+        background: white;
+        color: black;
+        box-shadow: 0 20px 40px 0 #00000014;
+
+        .card__image {
+            margin-bottom: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card__content {
+            padding: var(--m);
+        }
+    }
+
+    &--no-image {
+        box-shadow: 0 20px 40px 0 #00000014;
+
+        .card__image {
+            margin-bottom: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card__content {
+            padding: var(--m);
+        }
+
+        // TODO: Niet de manier. Laad namelijk evengoed de afbeelding in. Logica met Alpine JS toepassen.
+        .card__image {
+            display: none;
+        }
+    }
+}

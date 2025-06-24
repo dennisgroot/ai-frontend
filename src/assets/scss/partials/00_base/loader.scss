@@ -1,0 +1,42 @@
+/**
+ * Loader
+**/
+
+// body {
+//     &:before {
+//         content: '';
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: white;
+//         z-index: 1001;
+//         transition: 1s all ease 0s;
+//         visibility: hidden;
+//         opacity: 0;
+//         animation: 0s nojs linear 2s;
+//         @media (max-width: 640px) {
+//             display: none;
+//         }
+//     }
+
+//     &.preload {
+//         &:before {
+//             opacity: 1;
+//             visibility: visible;
+//         }
+//     }
+// }
+
+// @keyframes nojs {
+//     0% {
+//         opacity: 1;
+//         visibility: visible;
+//     }
+
+//     100% {
+//         opacity: 0;
+//         visibility: hidden;
+//     }
+// }

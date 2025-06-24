@@ -1,0 +1,51 @@
+/**
+ * WP Block Media Text
+ */
+.wp-block-media-text {
+    @extend .wp-block !optional;
+
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 50px !important;
+    }
+
+    figcaption {
+        margin: 0;
+        color: #A4A4A4;
+        border-left: 1px solid #A4A4A4;
+        font-size: 0.875rem;
+        padding: 12px 15px 10px;
+    }
+
+    .wp-block-media-text__media {
+        position: relative;
+
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 30px !important;
+        }
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .wp-block-media-text__content {
+        padding-right: 0;
+
+        @media only screen and (max-width: 600px) {
+            padding: 0 !important;
+        }
+    }
+
+    &.has-media-on-the-right {
+        // Media first on mobile
+        @media only screen and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wp-block-media-text__content {
+            padding-left: 0;
+        }
+    }
+}

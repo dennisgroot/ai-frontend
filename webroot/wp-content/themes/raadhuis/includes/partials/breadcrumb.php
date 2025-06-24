@@ -1,0 +1,1 @@
+<?php if (function_exists('yoast_breadcrumb')) { custom_breadcrumbs(); } ?>

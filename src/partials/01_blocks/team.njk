@@ -1,0 +1,80 @@
+<section x-data="teamSlider" x-intersect:enter.once="inViewport = true" class="team wp-block alignfull {{ className }} r-pb-l">
+    <template x-if="inViewport == true">
+
+        <div class="container">
+            <div class="text-center r-mb-l">
+                <h2 class="h2 team__title r-mb-s">{{ blockTitle }}</h2>
+                <div class="max-w-3xl mx-auto">
+                    <p data-fakerjs="sentences|3|6"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div x-init="initSlider" class="swiper swiper-container team__slider">
+                <div class="swiper-wrapper">
+                    {% for item in [0,1,2,3,4] %}
+                    <div class="swiper-slide team__slide">
+                        <div class="team__item grow text-center">
+                            <img loading="lazy" class="team__image lazyload r-mb-xs aspect-ratio-1-1" src="https://placehold.co/1200x900/{{ color }}/svg" alt="Name" />
+                            <div class="team__content grow r-pt-l">
+                                <h3 class="team__name mb-0">
+                                    John Doe
+                                </h3>
+                                <div class="team__description grow r-p-s mb-0">
+                                    <p data-fakerjs="sentences|2|3"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Add navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </template>
+</section>
+
+<script>
+    function teamSlider() {
+        return {
+            inViewport: false,
+
+            initSlider() {
+                console.log('teamSlider init');
+
+                if (typeof Swiper !== 'undefined') {
+                    var teamSlider = new Swiper(".team__slider", {
+                        effect: 'coverflow',
+                        grabCursor: true,
+                        allowTouchMove: true,
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        direction: 'horizontal',
+                        initialSlide: 1,
+                        loop: false,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 1200,
+                            modifier: 1,
+                            scale: 1,
+                            slideShadows: false
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+                    });
+                } else {
+                    console.error('Team slider', 'Swiper is not defined');
+                }
+            }
+        }
+    }
+</script>

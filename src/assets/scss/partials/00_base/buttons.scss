@@ -1,0 +1,67 @@
+/**
+ * Buttons
+**/
+
+// Aanvullingen op btn component uit Daisy UI, zie: https://daisyui.com/docs/button
+// .btn {
+//     @apply leading-xtight text-base py-4 px-6 h-auto max-h-none;
+// }
+
+.button,
+body .wp-element-button, .btn {
+   
+
+    &:hover,
+    &:focus {
+      
+    }
+
+    &.is-style-primary, &.btn-primary {
+       
+
+    }
+
+    &.is-style-secondary, &.btn-secondary {
+       
+    }
+
+    &.is-style-ghost, &.btn-ghost {
+       
+    }
+
+    // &.is-style-download {
+    //     position: relative;
+    //     padding: 20px 90px 20px 30px;
+    //     @apply bg-primary;
+    //     color: white;
+
+    //     @media (max-width: 640px) {
+    //         @apply py-4 pl-7 pr-20;
+    //     }
+
+    //     &:hover {
+    //         @apply bg-primary-700;
+    //     }
+
+    //     &:after {
+    //         content: '';
+    //         position: absolute;
+    //         right: 5px;
+    //         top: 5px;
+    //         bottom: 5px;
+    //         width: 62px;
+    //         background: url("../../assets/img/icon-download-white.svg") no-repeat;
+    //         background-position: center center;
+    //         background-size: 20px;
+    //     }
+    // }
+}
+
+.wp-block-buttons,
+.button-group {
+    @apply flex flex-row flex-wrap gap-2.5;
+}
+
+.link {
+    @apply text-primary-500 transform-none no-underline font-extrabold;
+}

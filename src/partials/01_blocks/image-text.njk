@@ -1,0 +1,18 @@
+<section x-data="{ showBlock: false }" x-intersect:enter.once="showBlock = true" data-block="{{ blockName }}" class="image-text wp-block alignfull {{className}}">
+    <template x-if="showBlock == true">
+        <div class="row items-center">
+            <div class="column small-12 large-6 image-text__text-col">
+                <div class="r-px-l wp-typography mx-auto max-w-3xl">
+                    <h2 class="h2 image-text__title">Lorem ipsum dolor</h2>
+                    <div class="image-text__text fs-large">
+                        <p>Callide demulceo angulus antea termes amitto quaerat cura vorago dedecor. Quis communis autem viduo. Decet absum nulla voluptatum atavus aggero demitto tristis unde vitae. Illo tabula statim vito. Adsidue alienus arx depereo coepi consuasor aperio utor ex temperantia.</p>
+                    </div>
+                    <a href="#" class="btn btn-primary" role="button">Call to action</a>
+                </div>
+            </div>
+            <div class="column small-12 large-6 image-text__image-col">
+                <img loading="lazy" class="image-text__image aspect-[12/8]" src="https://placehold.co/1200x800/{{color}}/svg" title="#" alt="Landscape" />
+            </div>
+        </div>
+    </template>
+</section>

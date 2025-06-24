@@ -1,0 +1,44 @@
+/**
+ * Item list
+**/
+
+.item-list {    
+    &__container {
+        min-height: 100%;
+        position: relative;
+        border-radius: 0.5rem;
+        
+    }
+    &__content {
+        padding: 30px 0;
+        @media (max-width: 640px) {
+            padding: 10px 0;
+        }
+    }
+    
+    &--black {
+        .item-list__container { 
+            background: black;
+            color: white;
+        }
+        .item-list__content {
+            padding: 30px;
+            @media (max-width: 640px) {
+                padding: 10px;
+            }
+        }
+    }
+
+    &--white { 
+        .item-list__container { 
+            background: white;
+            color: black;
+        }
+    }
+
+    &--no-image {
+        .item-list__image {
+            display: none;
+        }
+    }
+}

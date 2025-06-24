@@ -1,0 +1,172 @@
+body.login {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+
+
+    h1 {
+        a {
+            width: 200px;
+            height: 50px;
+            max-height: none;
+            max-width: none;
+            background-size: contain;
+            background-image: url('../img/raadhuis-login.png') !important;
+            background-image: none, url('../img/raadhuis-login.svg') !important;
+        }
+    }
+
+    a,
+    .button,
+    .transition {
+        transition: all 300ms ease;
+    }
+
+    input[type=radio]:checked:before {
+        color: #3958E9;
+    }
+
+    input[type=checkbox],
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=radio],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        color: rgb(0 0 0 / var(--tw-text-opacity))
+            /* #000000 */
+        ;
+
+        &:focus {
+            border-color: #000;
+            box-shadow: 0 0 0 1px #000;
+        }
+    }
+
+    input[type=checkbox]:checked:before {
+        content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%234310E8%27%2F%3E%3C%2Fsvg%3E");
+        color: #000;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: none;
+    }
+
+    a,
+    .button-link,
+    .components-button.is-link {
+        color: #3958e9;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #2d46ba;
+        }
+    }
+
+    .components-button.is-tertiary {
+        color: #3958e9;
+
+        &:hover,
+        &:focus {
+            color: #2d46ba;
+        }
+    }
+
+    .button {
+        &.button-primary {
+            border-color: #3958E9;
+            background-color: #3958E9;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 0 #0000 !important;
+            text-shadow: none !important;
+            outline: none;
+
+            &:focus,
+            &:hover {
+                border-color: #2d46ba;
+                background-color: #2d46ba;
+            }
+        }
+
+        .highlight {
+            background: #fcfcfc;
+        }
+
+        a,
+        .button-link,
+        .wp-core-ui .button,
+        .wp-core-ui .button-secondary {
+            box-shadow: none;
+            outline: none;
+        }
+
+        a:hover,
+        a:focus,
+        .button-link:hover,
+        .button-link:focus {
+            color: #2d46ba;
+        }
+
+        .page-title-action,
+        .wp-core-ui .button-primary {
+            background-color: #3958E9;
+            text-shadow: none !important;
+
+            &:focus,
+            &:hover {
+                background-color: #2d46ba;
+            }
+        }
+    }
+
+    form {
+        padding: 36px !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #loginform {
+        border: 1px solid #000 !important;
+    }
+
+    .button.wp-hide-pw {
+        text-decoration: none;
+        color: #000;
+
+        &:hover,
+        &:focus {
+            border: #000 !important;
+            color: #000 !important;
+        }
+    }
+
+    #backtoblog,
+    #nav,
+    h1 {
+        text-align: center;
+
+        a:hover {
+            color: #2d46ba !important;
+        }
+    }
+
+    .message, .notice, .success {
+        border-color: #3958E9;
+    }
+}

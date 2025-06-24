@@ -1,0 +1,26 @@
+<section class="downloads wp-block alignfull {{ className }}">
+
+    <div class="container">
+        <div class="r-mb-m max-w-3xl">
+            <h2 class="h2">{{ blockTitle }}</h2>
+            <p data-fakerjs="sentences|3|6"></p>
+        </div>
+    </div>
+
+    <div class="row small-up-1 medium-up-2 large-up-4">
+        {% for item in [0,1,2,3] %}
+        <div class="column">
+            <div class="r-mb-xs">
+                <h3>Bestandsnaam</h3>
+                <p>Bestandsnaam informatie Lorem ipsum dolor sit amet.</p>
+            </div>
+            <a href="#" class="button is-style-download" role="button">
+                Download bestand
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
